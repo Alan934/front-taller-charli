@@ -26,18 +26,18 @@ export default function NotFound() {
         {/* Botones de Acción */}
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
           <Link href="/dashboard">
-            <button className="w-full sm:w-auto px-6 py-3 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark flex items-center justify-center gap-2">
+            <span className="w-full sm:w-auto px-6 py-3 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark flex items-center justify-center gap-2 cursor-pointer block">
               <FaHome className="text-sm" />
               Ir al Dashboard
-            </button>
+            </span>
           </Link>
-          <button 
+          <span 
             onClick={() => window.history.back()}
-            className="w-full sm:w-auto px-6 py-3 font-bold text-white transition-colors duration-300 border border-brand-accent rounded-md hover:bg-brand-accent hover:text-white flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-6 py-3 font-bold text-white transition-colors duration-300 border border-brand-accent rounded-md hover:bg-brand-accent hover:text-white flex items-center justify-center gap-2 cursor-pointer block"
           >
             <FaArrowLeft className="text-sm" />
             Volver Atrás
-          </button>
+          </span>
         </div>
 
         {/* Información Adicional */}

@@ -10,7 +10,7 @@ const FAKE_VEHICLES = [
 ];
 
 export default function VehiculosPage() {
-  const [vehicles, setVehicles] = useState(FAKE_VEHICLES);
+  const [vehicles] = useState(FAKE_VEHICLES);
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredVehicles = vehicles.filter(vehicle => 
@@ -24,9 +24,9 @@ export default function VehiculosPage() {
     <div>
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-3xl font-bold">Gestión de Vehículos</h1>
-        <button className="px-4 py-2 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark">
+        <span className="px-4 py-2 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark cursor-pointer">
           + Agregar Vehículo
-        </button>
+        </span>
       </div>
 
       <div className="mb-4">
@@ -60,8 +60,8 @@ export default function VehiculosPage() {
                 <td className="px-6 py-4 whitespace-nowrap">{vehicle.patente}</td>
                 <td className="px-6 py-4 whitespace-nowrap">{vehicle.cliente}</td>
                 <td className="px-6 py-4 whitespace-nowrap space-x-4">
-                  <button className="text-brand-accent hover:underline">Ver</button>
-                  <button className="text-yellow-400 hover:underline">Editar</button>
+                  <span className="text-brand-accent hover:underline cursor-pointer">Ver</span>
+                  <span className="text-yellow-400 hover:underline cursor-pointer">Editar</span>
                 </td>
               </tr>
             ))}

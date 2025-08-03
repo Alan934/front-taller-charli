@@ -34,7 +34,7 @@ const FAKE_APPOINTMENTS = [
 ];
 
 export default function TurnosPage() {
-  const [appointments, setAppointments] = useState(FAKE_APPOINTMENTS);
+  const [appointments] = useState(FAKE_APPOINTMENTS);
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredAppointments = appointments.filter(appointment => 
@@ -61,9 +61,9 @@ export default function TurnosPage() {
     <div>
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-3xl font-bold">Gestión de Turnos</h1>
-        <button className="px-4 py-2 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark">
+        <span className="px-4 py-2 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark cursor-pointer">
           + Crear Turno
-        </button>
+        </span>
       </div>
 
       <div className="mb-4">
@@ -103,8 +103,8 @@ export default function TurnosPage() {
                   </span>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap space-x-4">
-                  <button className="text-brand-accent hover:underline">Ver</button>
-                  <button className="text-yellow-400 hover:underline">Editar</button>
+                  <span className="text-brand-accent hover:underline cursor-pointer">Ver</span>
+                  <span className="text-yellow-400 hover:underline cursor-pointer">Editar</span>
                 </td>
               </tr>
             ))}

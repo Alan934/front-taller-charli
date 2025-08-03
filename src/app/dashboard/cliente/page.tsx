@@ -10,9 +10,9 @@ const FAKE_CLIENTS = [
 ];
 
 export default function ClientesPage() {
-  const [clients, setClients] = useState(FAKE_CLIENTS);
+  const [clients] = useState(FAKE_CLIENTS);
   const [searchTerm, setSearchTerm] = useState('');
-  
+
   // En una aplicación real, usarías useEffect para obtener datos de tu API
   // useEffect(() => {
   //   fetchClients();
@@ -28,9 +28,9 @@ export default function ClientesPage() {
     <div>
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-3xl font-bold">Gestión de Clientes</h1>
-        <button className="px-4 py-2 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark">
+        <span className="px-4 py-2 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark cursor-pointer">
           + Agregar Cliente
-        </button>
+        </span>
       </div>
 
       <div className="mb-4">
@@ -62,8 +62,8 @@ export default function ClientesPage() {
                 <td className="px-6 py-4 whitespace-nowrap">{client.email}</td>
                 <td className="px-6 py-4 whitespace-nowrap">{client.dni}</td>
                 <td className="px-6 py-4 whitespace-nowrap space-x-4">
-                  <button className="text-brand-accent hover:underline">Ver</button>
-                  <button className="text-yellow-400 hover:underline">Editar</button>
+                  <span className="text-brand-accent hover:underline cursor-pointer">Ver</span>
+                  <span className="text-yellow-400 hover:underline cursor-pointer">Editar</span>
                 </td>
               </tr>
             ))}

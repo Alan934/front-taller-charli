@@ -48,18 +48,18 @@ export default function Error({
 
         {/* Botones de Acción */}
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <button
+          <span
             onClick={reset}
-            className="w-full sm:w-auto px-6 py-3 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-6 py-3 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark flex items-center justify-center gap-2 cursor-pointer block"
           >
             <FaRedo className="text-sm" />
             Intentar de Nuevo
-          </button>
+          </span>
           <Link href="/dashboard">
-            <button className="w-full sm:w-auto px-6 py-3 font-bold text-white transition-colors duration-300 border border-brand-accent rounded-md hover:bg-brand-accent hover:text-white flex items-center justify-center gap-2">
+            <span className="w-full sm:w-auto px-6 py-3 font-bold text-white transition-colors duration-300 border border-brand-accent rounded-md hover:bg-brand-accent hover:text-white flex items-center justify-center gap-2 cursor-pointer block">
               <FaHome className="text-sm" />
               Ir al Dashboard
-            </button>
+            </span>
           </Link>
         </div>
 

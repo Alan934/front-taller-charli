@@ -9,8 +9,7 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleLogin = async () => {
     setError(null);
     
     // --- Lógica de login hardcodeada ---
@@ -31,7 +30,7 @@ export default function LoginPage() {
         <h1 className="text-2xl font-bold text-center text-brand-light">
           Taller Charli - Acceso Administrativo
         </h1>
-        <form onSubmit={handleLogin} className="space-y-6">
+        <div className="space-y-6">
           <div>
             <label
               htmlFor="email"
@@ -72,14 +71,14 @@ export default function LoginPage() {
           </div>
            {error && <p className="text-sm text-center text-red-500">{error}</p>}
           <div>
-            <button
-              type="submit"
-              className="w-full px-4 py-2 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-brand-accent"
+            <span
+              onClick={handleLogin}
+              className="w-full px-4 py-2 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-brand-accent cursor-pointer block text-center"
             >
               Iniciar Sesión
-            </button>
+            </span>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );
