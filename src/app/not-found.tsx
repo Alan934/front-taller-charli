@@ -31,13 +31,12 @@ export default function NotFound() {
               Ir al Dashboard
             </span>
           </Link>
-          <span 
-            onClick={() => window.history.back()}
-            className="w-full sm:w-auto px-6 py-3 font-bold text-white transition-colors duration-300 border border-brand-accent rounded-md hover:bg-brand-accent hover:text-white flex items-center justify-center gap-2 cursor-pointer block"
-          >
-            <FaArrowLeft className="text-sm" />
-            Volver Atrás
-          </span>
+          <Link href="/">
+            <span className="w-full sm:w-auto px-6 py-3 font-bold text-white transition-colors duration-300 border border-brand-accent rounded-md hover:bg-brand-accent hover:text-white flex items-center justify-center gap-2 cursor-pointer block">
+              <FaArrowLeft className="text-sm" />
+              Volver Atrás
+            </span>
+          </Link>
         </div>
 
         {/* Información Adicional */}

@@ -46,19 +46,19 @@ export default function DashboardHomePage() {
           <h2 className="text-xl font-semibold mb-4">Acciones Rápidas</h2>
           <div className="flex flex-wrap gap-4">
             <Link href="/dashboard/clientes">
-              <button className="px-5 py-3 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark">
+              <span className="px-5 py-3 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark cursor-pointer block">
                 Gestionar Clientes
-              </button>
+              </span>
             </Link>
             <Link href="/dashboard/turnos">
-              <button className="px-5 py-3 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark">
+              <span className="px-5 py-3 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark cursor-pointer block">
                 Gestionar Turnos
-              </button>
+              </span>
             </Link>
             <Link href="/dashboard/vehiculos">
-              <button className="px-5 py-3 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark">
+              <span className="px-5 py-3 font-bold text-white transition-colors duration-300 bg-brand-accent rounded-md hover:bg-brand-accent-dark cursor-pointer block">
                 Gestionar Vehículos
-              </button>
+              </span>
             </Link>
           </div>
         </div>
